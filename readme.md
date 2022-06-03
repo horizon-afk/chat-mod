@@ -38,7 +38,6 @@ To start the bot just type
 * On Windows
 ```
 py main.py
-
 ```
 
 * On Linux or MacOS
