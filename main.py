@@ -17,10 +17,12 @@ async def on_ready():
 #triggers when a message is sent
 @bot.event
 async def on_message(message):
-    mod.message = message.content
-    mod.channel = message.channel
-    purge = mod.deleteMsg()
+    mod.message = message.content                                                            
+    mod.channel = str(message.channel)  # the data type of channel is originally "discord.channel.TextChannel"
+    mod.embeds = message.embeds
     
+    purge = mod.deleteMsg()
+        
     if (purge == True):
         await message.channel.purge(limit=1)
 
